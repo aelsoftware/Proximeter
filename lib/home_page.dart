@@ -94,6 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         onPressed: () {
           if (points.length > 3) {
+            points.add(points[0]);
+            calculatedArea = calculateArea(points);
+            setState(() {});
             Navigator.push(
               context,
               MaterialPageRoute(
